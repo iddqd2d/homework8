@@ -7,7 +7,6 @@ public class ExecutorServiceExample {
     private static ExecutorService service = Executors.newSingleThreadScheduledExecutor();
 
     public static void main(String[] args) throws Exception {
-
         Future future = service.submit(new GetName(1));
 
         if (!future.isDone()) {
