@@ -1,4 +1,4 @@
-package com.executors;
+package com.executors.executeservice;
 
 import java.util.concurrent.*;
 
@@ -8,17 +8,15 @@ public class ExecutorServiceExample {
 
     public static void main(String[] args) throws Exception {
 
-        Future future = service.submit(() -> {
-            System.out.println("Another Thread");
-            Thread.sleep(1000);
-            return "Select from BD";
-        });
+        Future future = service.submit(new GetName(1));
 
         if (!future.isDone()) {
-            System.out.println("check another thread in main");
+            System.out.println("Getting name");
         }
 
         System.out.println("Result: " + future.get());
         service.shutdown();
     }
 }
+
+
