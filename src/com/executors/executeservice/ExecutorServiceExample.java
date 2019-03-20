@@ -1,9 +1,10 @@
 package com.executors.executeservice;
 
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class ExecutorServiceExample {
-
     private static ExecutorService service = Executors.newSingleThreadScheduledExecutor();
 
     public static void main(String[] args) throws Exception {
@@ -17,5 +18,3 @@ public class ExecutorServiceExample {
         service.shutdown();
     }
 }
-
-

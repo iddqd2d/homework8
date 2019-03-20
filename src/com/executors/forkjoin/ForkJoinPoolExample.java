@@ -1,7 +1,6 @@
 package com.executors.forkjoin;
 
 import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.RecursiveTask;
 
 public class ForkJoinPoolExample {
     public static final long NUM_OF_OPERATION = 1_000_000_000L;
