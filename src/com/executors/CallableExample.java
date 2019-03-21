@@ -4,13 +4,12 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
 public class CallableExample {
-    private static int sum;
 
     public static void main(String[] args) throws Exception {
         Callable task = () -> {
-            for (int i = 0; i < Byte.MAX_VALUE; i++) {
+            int sum = 0;
+            for (int i = 0; i < Byte.MAX_VALUE; i++, sum++) {
                 Thread.sleep(1000);
-                sum += i;
             }
             return sum;
         };
